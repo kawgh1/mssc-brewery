@@ -46,56 +46,56 @@
     
 - Built in Constraint Defintions
 
-    - @Null - checks if value is null
-    - @NotNull - checks if value is not null
-    - @AssertTrue - checks if value is true
-    - @AssertFalse - checks if value is false
-    - @Min - checks if value is equal or higher than
-    - @Max - checks if value is equal or lower than
-    - @DecimalMin - checks if value is larger than
-    - @DecimalMax - checks if value is smaller than
-    - @Negative - checks if value is less than zero. Zero invalid.
-    - @NegativeOrZero - checks if value is equal to or less than zero
-    - @Positive - checks if value is greater than zero. Zero invalid.
-    - @PositiveOrZero - checks if value is equal to or greater than zero
-    - @Size - checks if string collection is between a min and max
-    - @Digits - checks if value contains integer digits and fraction digits
-    - @Past - checks if date is past
-    - @PastOrPresent - checks if date is past or present
-    - @Future - checks if date is future
-    - @FutureOrPresent - checks if date is future or present
-    - @Pattern - checks if value against a RegEx pattern
-    - @NotEmpty - checks if value is null or empty(whitespace characters or empty collection)
-    - @NotBlank - checks if string is not null or not whitespace characters
-    - @Email - checks if string value is valid email address
+    - **@Null** - checks if value is null
+    - **@NotNull** - checks if value is not null
+    - **@AssertTrue** - checks if value is true
+    - **@AssertFalse** - checks if value is false
+    - **@Min** - checks if value is equal or higher than
+    - **@Max** - checks if value is equal or lower than
+    - **@DecimalMin** - checks if value is larger than
+    - **@DecimalMax** - checks if value is smaller than
+    - **@Negative** - checks if value is less than zero. Zero invalid.
+    - **@NegativeOrZero** - checks if value is equal to or less than zero
+    - **@Positive** - checks if value is greater than zero. Zero invalid.
+    - **@PositiveOrZero** - checks if value is equal to or greater than zero
+    - **@Size** - checks if string collection is between a min and max
+    - **@Digits** - checks if value contains integer digits and fraction digits
+    - **@Past** - checks if date is past
+    - **@PastOrPresent** - checks if date is past or present
+    - **@Future** - checks if date is future
+    - **@FutureOrPresent** - checks if date is future or present
+    - **@Pattern** - checks if value against a RegEx pattern
+    - **@NotEmpty** - checks if value is null or empty(whitespace characters or empty collection)
+    - **@NotBlank** - checks if string is not null or not whitespace characters
+    - **@Email** - checks if string value is valid email address
     
 - Hibernate Validator Constraints
 
-    - @ScriptAssert - Class level annotation, checks class against script
-    - @CreditCardNumber - verifies value is a valid credit card number
-    - @Currency - valid currency amount
-    - DurationMax - checks if duration is less than given value
-    - DurationMin - checks if duration is greater than given value
-    - @EAN - valid EAN barcode (Europe)
-    - @ISBN - valid ISBN value
-    - @Length - String length between given min and max
-    - @CodePointLength - Validates that code point length of the annotated character sequence is between min and max inclusive
-    - @LuhnCheck - Luhn check sum
-    - @Mod10Check - Mod 10 checksum
-    - @Mod11Check - Mod 11 checksum
-    - @Range - checks if number is between given min and max (inclusive)
-    - @SafeHtml - checks for safe HTML
-    - @UniqueElements - checks if collection has all unique elements
-    - @Url - checks for valid URL
+    - **@ScriptAssert** - Class level annotation, checks class against script
+    - **@CreditCardNumber** - verifies value is a valid credit card number
+    - **@Currency** - valid currency amount
+    - **@DurationMax** - checks if duration is less than given value
+    - **@DurationMin** - checks if duration is greater than given value
+    - **@EAN** - valid EAN barcode (Europe)
+    - **@ISBN** - valid ISBN value
+    - **@Length** - String length between given min and max
+    - **@CodePointLength** - Validates that code point length of the annotated character sequence is between min and max inclusive
+    - **@LuhnCheck** - Luhn check sum
+    - **@Mod10Check** - Mod 10 checksum
+    - **@Mod11Check** - Mod 11 checksum
+    - **@Range** - checks if number is between given min and max (inclusive)
+    - **@SafeHtml** - checks for safe HTML
+    - **@UniqueElements** - checks if collection has all unique elements
+    - **@Url** - checks for valid URL
     
 - Hibernate Validator Country Constraints (examples)
 
-    - @CNPJ - Brazilian Corporate Tax Payer Registry Number
-    - @CPF - Brazilian Individual Tax Payer Registry Number
-    - @TituloEleitoral - Brazilian Voter ID
-    - @NIP - Polish VAR ID
-    - @PESEL - Polish National Validation Number
-    - @REGON - Polish Taxpayer ID
+    - **@CNPJ** - Brazilian Corporate Tax Payer Registry Number
+    - **@CPF** - Brazilian Individual Tax Payer Registry Number
+    - **@TituloEleitoral** - Brazilian Voter ID
+    - **@NIP** - Polish VAR ID
+    - **@PESEL** - Polish National Validation Number
+    - **@REGON** - Polish Taxpayer ID
     
 - Bean Validation Usage
     - Hibernate Validator 6+ is only implementation of Bean Validation 2.0
