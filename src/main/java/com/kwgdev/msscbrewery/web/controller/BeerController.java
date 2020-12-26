@@ -7,6 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.ConstraintViolationException;
+import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -29,7 +33,7 @@ public class BeerController {
     }
 
     @PostMapping // POST - create a new beer
-    public ResponseEntity handlePost(@RequestBody BeerDto beerDto) { // @RequestBody required or saves null
+    public ResponseEntity handlePost(@Valid @RequestBody BeerDto beerDto) { // @RequestBody required or saves null
 
         BeerDto savedDto = beerService.saveNewBeer(beerDto);
 
@@ -41,7 +45,7 @@ public class BeerController {
     }
 
     @PutMapping({"/{beerId}"})
-    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDto beerDto) { // @RequestBody required or saves null
+    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @Valid @RequestBody BeerDto beerDto) { // @RequestBody required or saves null
 
         beerService.updateBeer(beerId, beerDto);
 
@@ -50,11 +54,14 @@ public class BeerController {
     }
 
     @DeleteMapping({"/{beerId}"})
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    @ResponseStatus(HttpStatus.BAD_GATEWAY) // test to show brewery client delete method is working
+    @ResponseStatus(HttpStatus.OK)
     public void deleteBeer(@PathVariable("beerId") UUID beerId) {
 
         beerService.deleteById(beerId);
 
     }
+
+
 
 }
