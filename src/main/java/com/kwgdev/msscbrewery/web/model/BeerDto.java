@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Null;
 import javax.validation.constraints.Positive;
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 /**
@@ -32,4 +33,10 @@ public class BeerDto {
 
     @Positive
     private Long upc;
+
+    // OffsetDateTime is a good Date Type to use for public facing components and interfaces, but not for Databases
+    // Use MapStruct to convert
+    private OffsetDateTime createdDate;
+
+    private OffsetDateTime lastUpdatedDate;
 }

@@ -6,7 +6,9 @@
 - Lombok - annotation processor
     - Lombok annotations - generates constructors, getters, setters, etc. at runtime
     - must enable Annotation Processors in Settings -> Build, Execution, Deployment -> Compiler -> Annotation Processors
-    
+
+- MapStruct
+
 - Axis TCP Mon - monitor plugin
     - useful for seeing what is actually going across the wire between a client and server in HTTP 
         - and not what the browser, application or server is telling you is going across
@@ -15,6 +17,36 @@
     - old but still works
     
 # Notes
+
+### MapStruct
+- First release in 2017
+- Founded by Gunnar Morling, who is the spec lead for Hibernate on Bean Validation 2.0
+- Current release 1.3.0.Final - Feb 2019
+- MapStruct is a code generator for mapping between Java bean types
+    -ie interface/repository layer and converting those to an entity, and back and forth
+    - ie BeerDto -> Beer (Entity, POJO)
+    - Spring Data Rest will expose your entire entities out to the web
+    - Practically speaking, larger Enterprise projects RARELY expose their database objects to API consumers or to the web tier
+    - Typically the API consumer is going to have different needs and demands than what the persistence layer has
+    - MapStruct allows developers an easy way to keep web tier and data tier separated with easy conversion and not a lot of code
+- Like Project Lombok, MapStruct hooks into annotation processing to generate code
+- Unlike Project Lombok, Mapstruct will generate source code
+
+- Mapstruct follows a convention over configuration approach
+- Mapstruct works by you declaring an interface, MapStruct generates the implementation
+- Properties of the same name / same type will automatically get mapped
+    - huge time saver
+- Different property names are configured via annotation properties
+- Different types can be referenced with additional mapper implementations
+- If present, MapStruct will use builders
+
+- Mappers can reference other mappers
+    - ie an Order Mapper can use the Order Line Mapper
+- Can be configured to annotate generated mappers as Spring Components
+    - Useful for Dependency Injection with Spring
+- Can use default methods on interfaces
+- Complex mappings can be done via abstract classes
+
 
 ### Java Bean Validation & Hibernate Validator
 
